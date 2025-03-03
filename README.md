@@ -1,12 +1,25 @@
 # 63131839-AndroidProgramming
-Nơi lưu trữ bài tập " LẬP TRÌNH ANDROID " 
-👀 Những bài tập thực hành 👀..!
+<h2 align="center">LẬP TRÌNH THIẾT BỊ DI ĐỘNG<br>Mobile Programming</h2>
 
-[📁Ex1_Hello](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex1_Hello/HelloWorld)
-[Hình Ảnh](![Hình Ảnh](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex1_Hello.png))
+<div align="center">
+  <img height="350" src=https://proeffico.com/wp-content/uploads/2023/10/mobile-application-digital-marketing.gif />
+</div>
+👀 NHỮNG SOURCES CODE BÀI TẬP THỰC HÀNH👀!
 
-[📁Ex2_LinearLayout]( https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex2_LinearLayout)
-[Hình Ảnh](![Hình Ảnh](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex2_LinearLayout.png))
-
-[📁Ex3_SimpleSumApp]( https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex3_SimpleSumApp)
-[Hình Ảnh](![Hình Ảnh](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex3_SimpleSumApp.png))
+###
+<div>
+  <h4>📂Ex1_Hello: <a href = "https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex1_Hello/HelloWorld">Ex1_Hello</a></h4>
+  <img src = "https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex1_Hello.png" width = "200">
+</div>
+<div>
+    <h4>📂Ex2_LinearLayout:<a href = "https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex2_LinearLayout">Ex2_LinearLayout</a></h4>
+    <img src = "https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex2_LinearLayout.png" width = "200">
+</div>
+<div>
+    <h4>📂Ex3_SimpleSumApp:<a href = "https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex3_SimpleSumApp">Ex3_SimpleSumApp</a></h4>
+    <img src = "https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex3_SimpleSumApp.png" width = "200">
+</div>
+<div>
+    <h4>📂Ex4_AddSubMulDiv_Onclick:<a href = https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex4_AddSubMulDiv_Onclick>Ex4_AddSubMulDiv_Onclick</a></h4>
+    <img src = "" width = "200">
+</div>
