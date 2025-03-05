@@ -37,11 +37,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/edtSo2"
             android:text="Số thứ hai"
             android:textSize="18dp"
             android:textColor="@color/black"/>
         <EditText
+            android:id="@+id/edtSo2"
             android:layout_marginTop="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
