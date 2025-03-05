@@ -1,7 +1,7 @@
 
 ## 📱📱 LẬP TRÌNH THIẾT BỊ DI ĐỘNG  📱📱
-## Android Progamming
 <div align="center">
+  <h1>ANDROID PROGRAMMING</h1>
   <img src="https://proeffico.com/wp-content/uploads/2023/10/mobile-application-digital-marketing.gif" width="60%" style="border-radius: 79px;"/>
 </div>
   
