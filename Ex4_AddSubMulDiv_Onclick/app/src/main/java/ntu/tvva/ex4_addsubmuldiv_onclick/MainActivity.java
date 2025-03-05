@@ -18,23 +18,23 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextSo2;
     EditText editTextKQ;
     Button nutCong,nutTru,nutNhan,nutChia;
+    void TimDieuKhien(){
+        editTextSo1 = findViewById(R.id.edtSo1);
+        editTextSo2 = findViewById(R.id.edtSo2);
+        editTextKQ = findViewById(R.id.edtKetqua);
+        nutCong =findViewById(R.id.btnCong);
+        nutTru =findViewById(R.id.btnTru);
+        nutNhan =findViewById(R.id.btnNhan);
+        nutChia =findViewById(R.id.btnChia);
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         TimDieuKhien();
     }
-    void TimDieuKhien(){
-        editTextSo1 = (EditText)findViewById(R.id.edtSo1);
-        editTextSo2 = (EditText)findViewById(R.id.edtSo2);
-        editTextKQ = (EditText)findViewById(R.id.edtKetqua);
-        nutCong =(Button)findViewById(R.id.btnCong);
-        nutTru =(Button)findViewById(R.id.btnTru);
-        nutNhan =(Button)findViewById(R.id.btnNhan);
-        nutChia =(Button)findViewById(R.id.btnChia);
 
-    }
 
 
 
@@ -76,14 +76,14 @@ public class MainActivity extends AppCompatActivity {
         float soA= Float.parseFloat(soThu1);
         float soB= Float.parseFloat(soThu2);
         //B2.Tinh Toan
-        float tong = soA - soB;
+        float tru = soA - soB;
         //B3 Hien Ket Qua
         //B3.1
 
         //B3.2 Chuan Bi Du Lieu Xuat,Bien thanh dang chuo
 
 
-        String chuoiKQ = String.valueOf(tong);
+        String chuoiKQ = String.valueOf(tru);
         //B3.3 Gan Ket Qua len Dieu Khien
         editTextKQ.setText(chuoiKQ);
     }
@@ -100,19 +100,19 @@ public class MainActivity extends AppCompatActivity {
         float soA= Float.parseFloat(soThu1);
         float soB= Float.parseFloat(soThu2);
         //B2.Tinh Toan
-        float tong = soA * soB;
+        float nhan = soA * soB;
         //B3 Hien Ket Qua
         //B3.1
 
         //B3.2 Chuan Bi Du Lieu Xuat,Bien thanh dang chuoi
 
 
-        String chuoiKQ = String.valueOf(tong);
+        String chuoiKQ = String.valueOf(nhan);
         //B3.3 Gan Ket Qua len Dieu Khien
         editTextKQ.setText(chuoiKQ);
     }
     //Ham Xu ly chia
-    public void XulyChia(View v){
+    public void XuLyChia(View v){
         //code xu ly chia
         //B1 layDL 2 so
         //B1.1 Tim View.EditText so 1 va so 2
@@ -124,14 +124,14 @@ public class MainActivity extends AppCompatActivity {
         float soA= Float.parseFloat(soThu1);
         float soB= Float.parseFloat(soThu2);
         //B2.Tinh Toan
-        float tong = soA / soB;
+        float chia = soA / soB;
         //B3 Hien Ket Qua
         //B3.1
 
         //B3.2 Chuan Bi Du Lieu Xuat,Bien thanh dang chuoi
 
 
-        String chuoiKQ = String.valueOf(tong);
+        String chuoiKQ = String.valueOf(chia);
         //B3.3 Gan Ket Qua len Dieu Khien
         editTextKQ.setText(chuoiKQ);
     }
