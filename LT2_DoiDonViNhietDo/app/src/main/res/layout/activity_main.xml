@@ -33,7 +33,7 @@
         android:textColor="#FFFFFF"
         android:padding="15dp"
         android:textStyle="italic"
-        android:backgroundTint="#03A9F4"/>
+        android:background="@drawable/btn_style"/>
 
     <EditText
         android:id="@+id/edtF"
