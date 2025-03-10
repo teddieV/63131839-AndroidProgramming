@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="Chuyển sang Celsius"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#03A9F4"
+        android:background="@drawable/btn_style"
         android:textColor="#FFFFFF"
         android:padding="15dp"
         android:textStyle="italic"/>
