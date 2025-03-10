@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="#DFF6FF">
+    
+
+    <EditText
+        android:id="@+id/edtC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập nhiệt độ Celsius"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnCtoF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chuyển sang Fahrenheit"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edtF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập nhiệt độ Fahrenheit"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnFtoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chuyển sang Celsius"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtKetQua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>
