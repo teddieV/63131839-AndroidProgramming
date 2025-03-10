@@ -1,6 +1,5 @@
 package ntu.tvva.lt2_doidonvinhietdo;
 
-package com.example.doinhietdo;
 
 import android.os.Bundle;
 import android.view.View;
