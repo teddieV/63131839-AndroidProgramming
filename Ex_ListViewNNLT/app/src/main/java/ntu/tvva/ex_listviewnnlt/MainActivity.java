@@ -38,9 +38,9 @@
             dsNgonNguLT.add("Python");
             dsNgonNguLT.add("Php");
             dsNgonNguLT.add("Java");
-            //B2
+            //B2 Tao Adapter
             ArrayAdapter<String> adapterNNLT;
-            adapterNNLT = new ArrayAdapter<String>(android.R.layout.simple_.dsNgonNguLT);
+            adapterNNLT = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,dsNgonNguLT);
             //B3 Gan Adapter
             listViewNNLT.setAdapter(adapterNNLT);
             //B4 Gan bo lang nghe va xlsk
