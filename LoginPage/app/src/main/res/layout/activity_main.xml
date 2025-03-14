@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@"
+    android:background="@drawable/loginbkg_1"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/username"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/aesthetic"
                 android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:drawablePadding="8dp"
                 android:hint="Username"
@@ -82,11 +82,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Not yet registered? SignUp Now"
+        android:text="Not yet registered? Sign Up Now"
         android:textSize="14sp"
         android:textAlignment="center"
         android:id="@+id/signupText"
-        android:textColor="@color/purple"
+        android:textColor="@color/black"
         android:layout_marginBottom="20dp"/>
 
 </LinearLayout>
