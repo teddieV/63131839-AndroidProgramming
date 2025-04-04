@@ -1,29 +1,37 @@
 package thigk2.tranvanvietanh;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import java.security.PrivateKey;
 
 public class cn2 extends AppCompatActivity {
-    Private EditText edtGK , edtCK;
-    Private Button btnDTB;
-    Private TextView
+    private EditText edtGK, edtCK;
+    private TextView tvKQ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_cn2);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        edtGK = findViewById(R.id.edtGK);
+        edtCK = findViewById(R.id.edtCK);
+        tvKQ = findViewById(R.id.tvKQ);
+        Button btnDTB = findViewById(R.id.btnDTB);
+
+        btnDTB.setOnClickListener(v -> tinhDTB());
+    }
+
+    private void tinhDTB() {
+        try {
+            float diemGK = Float.parseFloat(edtGK.getText().toString().trim());
+            float diemCK = Float.parseFloat(edtCK.getText().toString().trim());
+            float diemTB = (diemGK + diemCK) / 2;
+            tvKQ.setText("Điểm trung bình: " + diemTB);
+        } catch (Exception e) {
+            tvKQ.setText("Lỗi nhập điểm!");
+        }
     }
 }
