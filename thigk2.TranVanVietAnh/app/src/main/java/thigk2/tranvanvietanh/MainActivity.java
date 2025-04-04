@@ -15,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button cn1 = findViewById(R.id.btn_Cn1);
         Button cn2 = findViewById(R.id.btn_Cn2);
         Button cn3 = findViewById(R.id.btn_Cn3);
         Button cn4 = findViewById(R.id.btn_Cn4);
+        Button aboutme = findViewById(R.id.btn_abme);
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        cn1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,cn1.class)));
+        aboutme.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,aboutme.class)));
         cn2.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,cn2.class)));
         cn3.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,cn3.class)));
         cn4.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,cn4.class)));

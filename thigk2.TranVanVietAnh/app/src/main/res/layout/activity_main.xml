@@ -11,59 +11,73 @@
         android:id="@+id/btn_Cn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="38dp"
+        android:paddingLeft="70dp"
+        android:paddingBottom="50dp"
         android:text="Chức năng 2"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Cn2"
+        android:textAlignment="gravity"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_Cn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="70dp"
+        android:paddingBottom="50dp"
         android:text="Chức năng 3"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Cn3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Cn2" />
 
     <Button
         android:id="@+id/btn_Cn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="70dp"
+        android:paddingBottom="50dp"
         android:text="Chức năng 4"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Cn4"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Cn3" />
 
     <Button
         android:id="@+id/btn_abme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="117dp"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="70dp"
+        android:paddingBottom="50dp"
         android:text="About Me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_Cn4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Cn4" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginBottom="11dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Cn2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="27dp"
+        android:scrollbarSize="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Cn2"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher_logontu50nam_foreground" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="46dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Cn1"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Cn2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/ic_launcher_logontu_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>
