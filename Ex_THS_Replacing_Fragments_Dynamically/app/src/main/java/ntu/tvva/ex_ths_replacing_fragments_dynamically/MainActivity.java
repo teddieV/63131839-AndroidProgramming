@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         });
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.Framecontenthoder, new ContentFragment())
-                .add(R.id.framefooterhoder, new FooterFragment())
+                .add(R.id.fragmentContainerView_Content, new ContentFragment())
+                .add(R.id.fragmentContainerView_Footer, new FooterFragment())
                 .commit();
     }
 }

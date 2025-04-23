@@ -7,26 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/Framecontenthoder"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_Content"
+        android:name="ntu.tvva.ex_ths_replacing_fragments_dynamically.ContentFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#00B0FF"
-        app:layout_constraintBottom_toTopOf="@+id/framefooterhoder"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView_Footer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/framefooterhoder"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_Footer"
+        android:name="ntu.tvva.ex_ths_replacing_fragments_dynamically.FooterFragment"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:background="#F9A825"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
