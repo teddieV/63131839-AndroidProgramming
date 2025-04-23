@@ -29,7 +29,7 @@
 | 📂 [Ex_THS_Replacing_Fragments_Dynamically](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex_THS_Replacing_Fragments_Dynamically) | Chuyển các fragment 1,2,3 | 
 |🖼️**Fragment 1**|🖼️**Fragment 2**|🖼️**Fragment 3**|
 ||||
-| <div align="center"><img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment1.PNG" width="70%" height="200px" style="object-fit: contain;"/></div> | <div align="center"><img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment2.PNG" width="50%" height="200px" style="object-fit: contain;"/></div> | <div align="center"><img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment3.PNG" width="70%" height="200px" style="object-fit: contain;"/></div> |
+| <div align="center"><img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment1.PNG" width="50%" height="200px" style="object-fit: contain;"/></div> | <div align="center"><img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment2.PNG" width="50%" height="200px" style="object-fit: contain;"/></div> | <div align="center"><img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment3.PNG" width="70%" height="200px" style="object-fit: contain;"/></div> |
 ## 🌟 BÀI TẬP LÀM THÊM
 
 |📚**Bài tập**|🎨**Mô tả**|🖼️**Hình ảnh**|
