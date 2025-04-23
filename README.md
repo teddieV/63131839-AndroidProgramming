@@ -28,7 +28,12 @@
 | 📂 [Ex_ListViewNNLT](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex_ListViewNNLT/app/src/main/java/ntu/tvva/ex_listviewnnlt) | ListView đơn giản về ngôn ngữ lập trình  | ![Ex_ListViewNNLT](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex_ListViewNNLT.PNG) |
 | 📂 [Ex_ListViewDanhSachTinhThanh](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex_ListViewDanhSachTinhThanh/app/src/main/java/ntu/tvva/ex_listviewdanhsachtinhthanh) | ListView đơn giản về Danh sách các tỉnh thành.  | ![Ex_ListViewDanhSachTinhThanh](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex_ListViewDanhSachTinhThanh.PNG) |
 | 📂 [Ex_THS_FragmentStatic](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex_FragmentStatic/app/src/main) | Sử dụng Fragment Static.  | ![Ex_THS_FragmentStatic](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Ex_FragmentStatic.PNG) |
-| 📂 [Ex_THS_Replacing_Fragments_Dynamically](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex_THS_Replacing_Fragments_Dynamically) | Chuyển các fragment 1,2,3.  | ![Ex_THS_Replacing_Fragments_Dynamically](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment1.PNG)![Ex_THS_Replacing_Fragments_Dynamically](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment2.PNG)![Ex_THS_Replacing_Fragments_Dynamically](https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment3.PNG)|
+| 📂 [Ex_THS_Replacing_Fragments_Dynamically](https://github.com/teddieV/63131839-AndroidProgramming/tree/main/Ex_THS_Replacing_Fragments_Dynamically) | Chuyển các fragment 1,2,3.  | 
+<p float="left">
+  <img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment1.PNG" width="32%" />
+  <img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment2.PNG" width="32%" />
+  <img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/%E1%BA%A2nh%20k%E1%BA%BFt%20qu%E1%BA%A3/Fragment3.PNG" width="32%" />
+</p> |
 
 ---
 
