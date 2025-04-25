@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "473488848820",
+    "project_id": "android-project1-1d07e",
+    "storage_bucket": "android-project1-1d07e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473488848820:android:4382482bb2855d630c64e1",
+        "android_client_info": {
+          "package_name": "ntu.tvva.vd_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHoKPWz-6_ucl5PMRWj8xUPRghKErVs-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
