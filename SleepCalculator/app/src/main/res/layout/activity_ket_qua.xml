@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mauNenXanh">
+    android:background="@drawable/moonbg4">
 
     <!-- Logo và tiêu đề -->
     <ImageView
@@ -33,11 +34,14 @@
         app:layout_constraintTop_toTopOf="@+id/anhMatTrang" />
 
     <!-- Tiêu đề "Giờ đi ngủ" -->
+
+    <!-- Thông tin về thời gian ngủ -->
+
     <TextView
         android:id="@+id/tieuDeKetQua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="28dp"
         android:text="Giờ đi ngủ"
         android:textColor="@color/mauNutBam"
         android:textSize="32sp"
@@ -46,7 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tieuDe" />
 
-    <!-- Thông tin về thời gian ngủ -->
     <TextView
         android:id="@+id/thongTinThoiGianNgu"
         android:layout_width="wrap_content"
@@ -55,6 +58,7 @@
         android:text="Trung bình một người cần 15 phút để đi vào giấc ngủ."
         android:textColor="@color/mauTrang"
         android:textSize="16sp"
+        android:background="@color/timePickerBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tieuDeKetQua" />
@@ -66,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
+        android:background="@color/timePickerBackground"
         android:text="Để thức dậy tỉnh táo lúc 10:35 PM,\nbạn nên đi ngủ vào một trong những thời điểm sau:"
         android:textColor="@color/mauTrang"
         android:textSize="16sp"
@@ -239,19 +244,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Thông tin về chu kỳ giấc ngủ -->
-    <TextView
-        android:id="@+id/thongTinChuKy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Nếu bạn thức dậy vào một trong những thời điểm này,\nbạn sẽ thức dậy giữa các chu kỳ giấc ngủ 90 phút.\nMột giấc ngủ ngon bao gồm 5-6 chu kỳ giấc ngủ hoàn chỉnh."
-        android:textColor="@color/mauTrang"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/khungThoiGian" />
 
     <!-- Nút quay lại -->
     <com.google.android.material.button.MaterialButton

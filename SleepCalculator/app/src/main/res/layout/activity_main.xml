@@ -6,10 +6,10 @@
     android:id="@+id/manHinhChinh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/moonbg3"
+    android:background="@drawable/moonbg4"
     tools:context=".MainActivity">
 
-    <!-- Logo mặt trăng -->
+    <!-- Cài Logo mặt trăng ( ic_moonwsky) -->
     <ImageView
         android:id="@+id/anhMatTrang"
         android:layout_width="48dp"
@@ -43,9 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Bạn muốn thức dậy lúc mấy giờ?"
-        android:textColor="@color/mauTrang"
-        android:textSize="24sp"
+        android:text="Bạn muốn thức dậy lúc nào?"
+        android:textColor="@color/mauNutBam"
+        android:fontFamily="@font/arcade_among_1"
+        android:background="@color/timePickerBackground"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tieuDe" />
@@ -74,6 +76,7 @@
         android:backgroundTint="@color/mauNutBam"
         android:padding="16dp"
         android:text="Tính giờ đi ngủ"
+        android:textSize="18dp"
         android:textColor="@color/mauNenXanh"
         app:icon="@drawable/ic_moon"
         app:iconGravity="end"
@@ -88,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Hoặc nếu bạn muốn đi ngủ ngay bây giờ..."
-        android:textColor="@color/mauTrang"
+        android:textColor="@color/mauNutBam"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,6 +107,7 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/mauNutBam"
         android:padding="16dp"
+        android:textSize="18dp"
         android:text="Tính giờ thức dậy"
         android:textColor="@color/mauNenXanh"
         app:icon="@drawable/ic_moon"
