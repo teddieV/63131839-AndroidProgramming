@@ -1,19 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout chính sử dụng ConstraintLayout để sắp xếp các thành phần UI -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/manHinhChinh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mauNenXanh"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <!-- Logo mặt trăng -->
+    <ImageView
+        android:id="@+id/anhMatTrang"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_moonwsky"
+        app:layout_constraintEnd_toStartOf="@+id/tieuDe"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tiêu đề ứng dụng -->
+    <TextView
+        android:id="@+id/tieuDe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Sleep Calculator"
+        android:fontFamily="@font/arcade_among_1"
+        android:textColor="@color/mauTrang"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/anhMatTrang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/anhMatTrang"
+        app:layout_constraintTop_toTopOf="@+id/anhMatTrang" />
+
+    <!-- Câu hỏi cho người dùng -->
+    <TextView
+        android:id="@+id/cauHoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Bạn muốn thức dậy lúc mấy giờ?"
+        android:textColor="@color/mauTrang"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tieuDe" />
+
+    <!-- Bộ chọn thời gian -->
+    <TimePicker
+        android:id="@+id/boChonGio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:theme="@style/CustomTimePicker"
+        android:background="@drawable/time_picker_border"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cauHoi" />
+
+    <!-- Nút tính giờ đi ngủ -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTinhGioDiNgu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/mauNutBam"
+        android:padding="16dp"
+        android:text="Tính giờ đi ngủ"
+        android:textColor="@color/mauNenXanh"
+        app:icon="@drawable/ic_moon"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boChonGio" />
+
+    <!-- Text hoặc -->
+    <TextView
+        android:id="@+id/textHoac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Hoặc nếu bạn muốn đi ngủ ngay bây giờ..."
+        android:textColor="@color/mauTrang"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTinhGioDiNgu" />
+
+    <!-- Nút tính giờ thức dậy -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTinhGioThucDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/mauNutBam"
+        android:padding="16dp"
+        android:text="Tính giờ thức dậy"
+        android:textColor="@color/mauNenXanh"
+        app:icon="@drawable/ic_moon"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHoac" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

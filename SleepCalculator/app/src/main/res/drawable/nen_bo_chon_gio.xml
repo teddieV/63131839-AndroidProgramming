@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Định nghĩa hình dạng và màu sắc cho nền của bộ chọn giờ -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Màu nền -->
+    <solid android:color="#1A1F3C" />
+    <!-- Bo tròn góc -->
+    <corners android:radius="16dp" />
+    <!-- Viền -->
+    <stroke
+        android:width="1dp"
+        android:color="#2A2F4C" />
+</shape> 
