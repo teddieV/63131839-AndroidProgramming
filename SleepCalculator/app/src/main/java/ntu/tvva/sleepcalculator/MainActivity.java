@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.widget.TimePicker;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
-import java.util.Calendar;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    // Khai báo các thành phần giao diện
     private TimePicker boChonGio;
     private MaterialButton btnTinhGioDiNgu;
     private MaterialButton btnTinhGioThucDay;
@@ -18,34 +18,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ánh xạ các thành phần
+        // Ánh xạ các thành phần từ layout
         boChonGio = findViewById(R.id.boChonGio);
         btnTinhGioDiNgu = findViewById(R.id.btnTinhGioDiNgu);
         btnTinhGioThucDay = findViewById(R.id.btnTinhGioThucDay);
 
-        // Xử lý sự kiện nút tính giờ đi ngủ
+        // Xử lý sự kiện khi nhấn nút "Tính giờ đi ngủ"
         btnTinhGioDiNgu.setOnClickListener(v -> {
-            int gio = boChonGio.getHour();
-            int phut = boChonGio.getMinute();
-            tinhGioDiNgu(gio, phut);
+            // Lấy giờ và phút từ TimePicker
+            int gioThucDay = boChonGio.getHour();
+            int phutThucDay = boChonGio.getMinute();
+            
+            // Gọi hàm tính giờ đi ngủ
+            tinhGioDiNgu(gioThucDay, phutThucDay);
         });
 
-        // Xử lý sự kiện nút tính giờ thức dậy
+        // Xử lý sự kiện khi nhấn nút "Tính giờ thức dậy"
         btnTinhGioThucDay.setOnClickListener(v -> {
-            Calendar hienTai = Calendar.getInstance();
-            int gio = hienTai.get(Calendar.HOUR_OF_DAY);
-            int phut = hienTai.get(Calendar.MINUTE);
-            tinhGioThucDay(gio, phut);
+            // Lấy giờ và phút từ TimePicker
+            int gioDiNgu = boChonGio.getHour();
+            int phutDiNgu = boChonGio.getMinute();
+            
+            // Gọi hàm tính giờ thức dậy
+            tinhGioThucDay(gioDiNgu, phutDiNgu);
         });
     }
 
+    // Hàm tính giờ đi ngủ dựa trên giờ thức dậy
     private void tinhGioDiNgu(int gioThucDay, int phutThucDay) {
+        // Danh sách để lưu các giờ đi ngủ
         ArrayList<String> danhSachGio = new ArrayList<>();
-        danhSachGio.add(dinhDangGio(gioThucDay, phutThucDay)); // Thêm giờ thức dậy vào đầu danh sách
+        
+        // Thêm giờ thức dậy vào đầu danh sách
+        danhSachGio.add(dinhDangGio(gioThucDay, phutThucDay));
 
-        // Tính 6 giờ đi ngủ (3-8 chu kỳ)
+        // Tính 6 giờ đi ngủ (từ 3 đến 8 chu kỳ)
         for (int soChuKy = 8; soChuKy >= 3; soChuKy--) {
-            int tongPhut = soChuKy * 90 + 15; // 90 phút/chu kỳ + 15 phút để ngủ
+            // Mỗi chu kỳ ngủ là 90 phút, cộng thêm 15 phút để ngủ
+            int tongPhut = soChuKy * 90 + 15;
+            
+            // Tính giờ đi ngủ bằng cách trừ tổng số phút từ giờ thức dậy
             int gioDiNgu = gioThucDay;
             int phutDiNgu = phutThucDay - tongPhut;
 
@@ -60,25 +72,29 @@ public class MainActivity extends AppCompatActivity {
                 gioDiNgu += 24;
             }
 
-            // Thêm thông tin về số chu kỳ vào giờ
+            // Thêm giờ đi ngủ và số chu kỳ vào danh sách
             String gioDinhDang = dinhDangGio(gioDiNgu, phutDiNgu);
             danhSachGio.add(gioDinhDang + " (" + soChuKy + " chu kỳ)");
         }
 
         // Chuyển sang màn hình kết quả
-        Intent intent = new Intent(this, KetQuaActivity.class);
-        intent.putExtra("loaiTinhToan", "diNgu");
-        intent.putStringArrayListExtra("cacGio", danhSachGio);
-        startActivity(intent);
+        chuyenManHinhKetQua("diNgu", danhSachGio);
     }
 
+    // Hàm tính giờ thức dậy dựa trên giờ đi ngủ
     private void tinhGioThucDay(int gioDiNgu, int phutDiNgu) {
+        // Danh sách để lưu các giờ thức dậy
         ArrayList<String> danhSachGio = new ArrayList<>();
-        danhSachGio.add(dinhDangGio(gioDiNgu, phutDiNgu)); // Thêm giờ đi ngủ vào đầu danh sách
+        
+        // Thêm giờ đi ngủ vào đầu danh sách
+        danhSachGio.add(dinhDangGio(gioDiNgu, phutDiNgu));
 
-        // Tính 6 giờ thức dậy (3-8 chu kỳ)
+        // Tính 6 giờ thức dậy (từ 3 đến 8 chu kỳ)
         for (int soChuKy = 3; soChuKy <= 8; soChuKy++) {
-            int tongPhut = soChuKy * 90 + 15; // 90 phút/chu kỳ + 15 phút để ngủ
+            // Mỗi chu kỳ ngủ là 90 phút, cộng thêm 15 phút để ngủ
+            int tongPhut = soChuKy * 90 + 15;
+            
+            // Tính giờ thức dậy bằng cách cộng tổng số phút vào giờ đi ngủ
             int gioThucDay = gioDiNgu;
             int phutThucDay = phutDiNgu + tongPhut;
 
@@ -93,18 +109,24 @@ public class MainActivity extends AppCompatActivity {
                 gioThucDay -= 24;
             }
 
-            // Thêm thông tin về số chu kỳ vào giờ
+            // Thêm giờ thức dậy và số chu kỳ vào danh sách
             String gioDinhDang = dinhDangGio(gioThucDay, phutThucDay);
             danhSachGio.add(gioDinhDang + " (" + soChuKy + " chu kỳ)");
         }
 
         // Chuyển sang màn hình kết quả
+        chuyenManHinhKetQua("thucDay", danhSachGio);
+    }
+
+    // Hàm chuyển sang màn hình kết quả
+    private void chuyenManHinhKetQua(String loaiTinhToan, ArrayList<String> danhSachGio) {
         Intent intent = new Intent(this, KetQuaActivity.class);
-        intent.putExtra("loaiTinhToan", "thucDay");
+        intent.putExtra("loaiTinhToan", loaiTinhToan);
         intent.putStringArrayListExtra("cacGio", danhSachGio);
         startActivity(intent);
     }
 
+    // Hàm định dạng giờ và phút thành chuỗi AM/PM
     private String dinhDangGio(int gio, int phut) {
         String sangChieu = "AM";
         if (gio >= 12) {

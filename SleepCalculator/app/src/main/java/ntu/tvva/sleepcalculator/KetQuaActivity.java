@@ -12,11 +12,9 @@ import java.util.ArrayList;
 public class KetQuaActivity extends AppCompatActivity implements View.OnClickListener {
     // Khai báo các thành phần giao diện
     private TextView tieuDeKetQua;
-    private TextView thongTinThoiGianNgu;
     private TextView thongTinGioThucDay;
     private TextView[] danhSachThoiGian;
-    private TextView[] danhSachGoiY;
-    private TextView thongTinChuKy;
+    private TextView[] danhSachChuKy;
     private Button btnQuayLai;
 
     @Override
@@ -28,13 +26,11 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
             // Ánh xạ các thành phần giao diện
             anhXaGiaoDien();
 
-            // Lấy và xử lý dữ liệu từ Intent
-            xuLyDuLieu();
+            // Lấy và hiển thị dữ liệu từ Intent
+            hienThiDuLieu();
 
             // Thiết lập sự kiện cho nút quay lại
-            if (btnQuayLai != null) {
-                btnQuayLai.setOnClickListener(this);
-            }
+            btnQuayLai.setOnClickListener(this);
         } catch (Exception e) {
             Toast.makeText(this, "Có lỗi xảy ra: " + e.getMessage(), Toast.LENGTH_LONG).show();
             finish();
@@ -52,17 +48,8 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
     private void anhXaGiaoDien() {
         // Ánh xạ các TextView chính
         tieuDeKetQua = findViewById(R.id.tieuDeKetQua);
-        thongTinThoiGianNgu = findViewById(R.id.thongTinThoiGianNgu);
         thongTinGioThucDay = findViewById(R.id.thongTinGioThucDay);
-        thongTinChuKy = findViewById(R.id.thongTinChuKy);
         btnQuayLai = findViewById(R.id.btnQuayLai);
-
-        // Kiểm tra null cho các thành phần chính
-        if (tieuDeKetQua == null || thongTinThoiGianNgu == null || 
-            thongTinGioThucDay == null || thongTinChuKy == null || 
-            btnQuayLai == null) {
-            throw new RuntimeException("Không thể tìm thấy các thành phần giao diện");
-        }
 
         // Khởi tạo mảng TextView cho thời gian
         danhSachThoiGian = new TextView[6];
@@ -73,28 +60,23 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
 
         for (int i = 0; i < danhSachThoiGian.length; i++) {
             danhSachThoiGian[i] = findViewById(thoiGianIds[i]);
-            if (danhSachThoiGian[i] == null) {
-                throw new RuntimeException("Không thể tìm thấy TextView thời gian " + (i + 1));
-            }
         }
 
         // Khởi tạo mảng TextView cho chu kỳ
-        danhSachGoiY = new TextView[6];
+        danhSachChuKy = new TextView[6];
         int[] chuKyIds = {
             R.id.chuKy1, R.id.chuKy2, R.id.chuKy3,
             R.id.chuKy4, R.id.chuKy5, R.id.chuKy6
         };
 
-        for (int i = 0; i < danhSachGoiY.length; i++) {
-            danhSachGoiY[i] = findViewById(chuKyIds[i]);
-            if (danhSachGoiY[i] == null) {
-                throw new RuntimeException("Không thể tìm thấy TextView chu kỳ " + (i + 1));
-            }
+        for (int i = 0; i < danhSachChuKy.length; i++) {
+            danhSachChuKy[i] = findViewById(chuKyIds[i]);
         }
     }
 
-    // Phương thức xử lý dữ liệu từ Intent
-    private void xuLyDuLieu() {
+    // Phương thức hiển thị dữ liệu từ Intent
+    private void hienThiDuLieu() {
+        // Lấy dữ liệu từ Intent
         Intent intent = getIntent();
         if (intent == null) {
             Toast.makeText(this, "Không thể nhận dữ liệu", Toast.LENGTH_SHORT).show();
@@ -121,24 +103,25 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         // Hiển thị các thời điểm và chu kỳ
-        int soThoiGian = Math.min(danhSachThoiGian.length, danhSachGio.size() - 1);
-        for (int i = 0; i < soThoiGian; i++) {
-            String gioVaChuKy = danhSachGio.get(i + 1);
+        for (int i = 1; i < danhSachGio.size(); i++) {
+            String gioVaChuKy = danhSachGio.get(i);
             String[] parts = gioVaChuKy.split(" \\(");
             String gio = parts[0];
             String chuKy = parts[1].replace(")", "");
             
-            danhSachThoiGian[i].setText(gio);
-            danhSachGoiY[i].setText(chuKy);
+            // Hiển thị thời gian và chu kỳ
+            danhSachThoiGian[i-1].setText(gio);
+            danhSachChuKy[i-1].setText(chuKy);
             
-            danhSachThoiGian[i].setVisibility(View.VISIBLE);
-            danhSachGoiY[i].setVisibility(View.VISIBLE);
+            // Hiển thị các TextView
+            danhSachThoiGian[i-1].setVisibility(View.VISIBLE);
+            danhSachChuKy[i-1].setVisibility(View.VISIBLE);
         }
 
         // Ẩn các TextView không sử dụng
-        for (int i = soThoiGian; i < danhSachThoiGian.length; i++) {
+        for (int i = danhSachGio.size() - 1; i < danhSachThoiGian.length; i++) {
             danhSachThoiGian[i].setVisibility(View.GONE);
-            danhSachGoiY[i].setVisibility(View.GONE);
+            danhSachChuKy[i].setVisibility(View.GONE);
         }
     }
 } 
