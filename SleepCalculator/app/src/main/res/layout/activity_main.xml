@@ -6,7 +6,7 @@
     android:id="@+id/manHinhChinh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mauNenXanh"
+    android:background="@drawable/moonbg3"
     tools:context=".MainActivity">
 
     <!-- Logo mặt trăng -->
