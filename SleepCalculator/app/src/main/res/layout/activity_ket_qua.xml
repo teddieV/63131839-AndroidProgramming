@@ -105,15 +105,6 @@
             app:layout_constraintTop_toBottomOf="@+id/thoiGian1" />
 
         <TextView
-            android:id="@+id/goiY1"
-            style="@style/TextGoiY"
-            android:text="GỢI Ý"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian1"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian1"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy1" />
-
-        <TextView
             android:id="@+id/thoiGian2"
             style="@style/KhungThoiGian"
             android:text="2:50 PM"
@@ -129,15 +120,6 @@
             app:layout_constraintStart_toStartOf="@+id/thoiGian2"
             app:layout_constraintTop_toBottomOf="@+id/thoiGian2" />
 
-        <TextView
-            android:id="@+id/goiY2"
-            style="@style/TextGoiY"
-            android:text="GỢI Ý"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian2"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian2"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy2" />
-
         <!-- Hàng 2 -->
         <TextView
             android:id="@+id/thoiGian3"
@@ -146,7 +128,7 @@
             android:text="4:20 PM"
             app:layout_constraintEnd_toStartOf="@+id/thoiGian4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goiY1" />
+            app:layout_constraintTop_toBottomOf="@+id/chuKy1" />
 
         <TextView
             android:id="@+id/chuKy3"
@@ -155,15 +137,6 @@
             app:layout_constraintEnd_toEndOf="@+id/thoiGian3"
             app:layout_constraintStart_toStartOf="@+id/thoiGian3"
             app:layout_constraintTop_toBottomOf="@+id/thoiGian3" />
-
-        <TextView
-            android:id="@+id/goiY3"
-            style="@style/TextGoiY"
-            android:text="GỢI Ý"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian3"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian3"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy3" />
 
         <TextView
             android:id="@+id/thoiGian4"
@@ -181,15 +154,6 @@
             app:layout_constraintStart_toStartOf="@+id/thoiGian4"
             app:layout_constraintTop_toBottomOf="@+id/thoiGian4" />
 
-        <TextView
-            android:id="@+id/goiY4"
-            style="@style/TextGoiY"
-            android:text="GỢI Ý"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian4"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian4"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy4" />
-
         <!-- Hàng 3 -->
         <TextView
             android:id="@+id/thoiGian5"
@@ -198,7 +162,7 @@
             android:text="7:20 PM"
             app:layout_constraintEnd_toStartOf="@+id/thoiGian6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goiY3" />
+            app:layout_constraintTop_toBottomOf="@+id/chuKy3" />
 
         <TextView
             android:id="@+id/chuKy5"
@@ -207,15 +171,6 @@
             app:layout_constraintEnd_toEndOf="@+id/thoiGian5"
             app:layout_constraintStart_toStartOf="@+id/thoiGian5"
             app:layout_constraintTop_toBottomOf="@+id/thoiGian5" />
-
-        <TextView
-            android:id="@+id/goiY5"
-            style="@style/TextGoiY"
-            android:text="GỢI Ý"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian5"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian5"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy5" />
 
         <TextView
             android:id="@+id/thoiGian6"
@@ -232,15 +187,6 @@
             app:layout_constraintEnd_toEndOf="@+id/thoiGian6"
             app:layout_constraintStart_toStartOf="@+id/thoiGian6"
             app:layout_constraintTop_toBottomOf="@+id/thoiGian6" />
-
-        <TextView
-            android:id="@+id/goiY6"
-            style="@style/TextGoiY"
-            android:text="GỢI Ý"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian6"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian6"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,9 +13,6 @@
         <item name="android:textColor">@color/timePickerText</item>
         <item name="android:textColorPrimary">@color/timePickerText</item>
         <item name="android:textColorSecondary">@color/timePickerText</item>
-        <item name="android:timePickerMode">spinner</item>
-        <item name="android:numbersTextColor">@color/timePickerText</item>
-        <item name="android:numbersSelectorColor">@color/timePickerSelected</item>
         <item name="android:numbersBackgroundColor">@color/timePickerBackground</item>
     </style>
 </resources>
