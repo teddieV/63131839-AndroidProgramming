@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SwitchTheme">
+        <!-- Màu khi bật -->
+        <item name="colorControlActivated">#FF5722</item>
+        <!-- Màu khi tắt -->
+        <item name="colorSwitchThumbNormal">#CCCCCC</item>
+        <!-- Màu track khi tắt -->
+        <item name="android:colorForeground">#42000000</item>
+    </style>
+</resources>

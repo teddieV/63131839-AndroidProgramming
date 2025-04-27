@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tính toán giấc ngủ"
+            android:textSize="24sp"
+            android:textColor="@color/mau_chu_chinh"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All you need is SLEEP💤💤"
+            android:textColor="@color/mau_chu_phu"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+        <!-- RadioGroup để chọn chế độ -->
+
+
+        <RadioGroup
+            android:id="@+id/rgFunction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbSleepMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chế độ Ngủ"
+                android:textColor="@color/mau_chu_chinh"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbWakeMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chế độ Thức dậy"
+                android:textColor="@color/mau_chu_chinh"/>
+        </RadioGroup>
+
+        <!-- Thẻ chọn thời gian -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/mau_nen_the"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian thức dậy"
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvSelectedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23:00"
+                    android:textSize="24sp"
+                    android:textColor="@color/mau_chu_nhan_manh"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Danh sách thời gian -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/mau_nen_the"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvResultLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Các thời điểm ngủ tốt nhất"
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Thời điểm 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTime1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 1 - 1 giờ 30 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+
+                <!-- Thời điểm 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTime2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 2 - 3 giờ 0 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+
+                <!-- Thời điểm 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTime3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 3 - 4 giờ 30 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+
+                <!-- Thời điểm 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTime4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 4 - 6 giờ 0 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+
+                <!-- Thời điểm 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTime5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 5 - 7 giờ 30 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+
+                <!-- Thời điểm 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTime6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 6 - 9 giờ 0 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+
+                <!-- Thời điểm 7 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTime7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="00:00 (Chu kỳ 7 - 10 giờ 30 phút)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnAlarm7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Đặt báo thức"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView> 
