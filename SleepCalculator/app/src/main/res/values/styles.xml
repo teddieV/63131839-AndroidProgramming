@@ -13,17 +13,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- Style cho text gợi ý -->
-    <style name="TextGoiY">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">#FF4081</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:background">@drawable/bg_goi_y</item>
-    </style>
-
     <!-- Style cho thông tin chu kỳ -->
     <style name="TextChuKy">
         <item name="android:layout_width">wrap_content</item>

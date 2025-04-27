@@ -5,7 +5,6 @@
     <color name="mauNutBam">#F5E6C3</color>
     <color name="mauTrang">#FFFFFF</color>
     <color name="mauDen">#000000</color>
-    <color name="mauXam">#808080</color>
     
     <!-- Màu sắc cho TimePicker -->
     <color name="timePickerBackground">#1A1F3C</color>
