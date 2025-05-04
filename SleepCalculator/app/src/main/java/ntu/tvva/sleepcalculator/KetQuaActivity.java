@@ -7,15 +7,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
+/**
+ * Activity hiển thị kết quả tính toán giờ ngủ/thức dậy
+ */
 public class KetQuaActivity extends AppCompatActivity implements View.OnClickListener {
-    // Khai báo các thành phần giao diện
     private TextView tieuDeKetQua;
     private TextView thongTinGioThucDay;
-    private TextView[] danhSachThoiGian;
-    private TextView[] danhSachChuKy;
+    private RecyclerView recyclerView;
     private Button btnQuayLai;
+    private KetQuaAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +27,8 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_ket_qua);
 
         try {
-            // Ánh xạ các thành phần giao diện
             anhXaGiaoDien();
-
-            // Lấy và hiển thị dữ liệu từ Intent
             hienThiDuLieu();
-
-            // Thiết lập sự kiện cho nút quay lại
             btnQuayLai.setOnClickListener(this);
         } catch (Exception e) {
             Toast.makeText(this, "Có lỗi xảy ra: " + e.getMessage(), Toast.LENGTH_LONG).show();
@@ -41,87 +40,55 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         if (v.getId() == R.id.btnQuayLai) {
             finish();
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
     }
 
-    // Phương thức ánh xạ các thành phần giao diện
+    /**
+     * Ánh xạ các thành phần giao diện
+     */
     private void anhXaGiaoDien() {
-        // Ánh xạ các TextView chính
         tieuDeKetQua = findViewById(R.id.tieuDeKetQua);
         thongTinGioThucDay = findViewById(R.id.thongTinGioThucDay);
         btnQuayLai = findViewById(R.id.btnQuayLai);
+        recyclerView = findViewById(R.id.recyclerView);
 
-        // Khởi tạo mảng TextView cho thời gian
-        danhSachThoiGian = new TextView[6];
-        int[] thoiGianIds = {
-            R.id.thoiGian1, R.id.thoiGian2, R.id.thoiGian3,
-            R.id.thoiGian4, R.id.thoiGian5, R.id.thoiGian6
-        };
-
-        for (int i = 0; i < danhSachThoiGian.length; i++) {
-            danhSachThoiGian[i] = findViewById(thoiGianIds[i]);
-        }
-
-        // Khởi tạo mảng TextView cho chu kỳ
-        danhSachChuKy = new TextView[6];
-        int[] chuKyIds = {
-            R.id.chuKy1, R.id.chuKy2, R.id.chuKy3,
-            R.id.chuKy4, R.id.chuKy5, R.id.chuKy6
-        };
-
-        for (int i = 0; i < danhSachChuKy.length; i++) {
-            danhSachChuKy[i] = findViewById(chuKyIds[i]);
-        }
+        // Thiết lập RecyclerView
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
     }
 
-    // Phương thức hiển thị dữ liệu từ Intent
+    /**
+     * Hiển thị dữ liệu từ Intent
+     */
     private void hienThiDuLieu() {
-        // Lấy dữ liệu từ Intent
         Intent intent = getIntent();
         if (intent == null) {
             Toast.makeText(this, "Không thể nhận dữ liệu", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String loaiTinhToan = intent.getStringExtra("loaiTinhToan");
-        ArrayList<String> danhSachGio = intent.getStringArrayListExtra("cacGio");
-        
-        if (loaiTinhToan == null || danhSachGio == null || danhSachGio.isEmpty()) {
+        String loai = intent.getStringExtra("loai");
+        int gio = intent.getIntExtra("gio", 0);
+        int phut = intent.getIntExtra("phut", 0);
+
+        if (loai == null) {
             Toast.makeText(this, "Dữ liệu không hợp lệ", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Cập nhật tiêu đề và thông tin dựa trên loại tính toán
-        if (loaiTinhToan.equals("diNgu")) {
+        ArrayList<String> danhSachKetQua;
+        if (loai.equals("diNgu")) {
             tieuDeKetQua.setText("Giờ đi ngủ");
-            thongTinGioThucDay.setText("Để thức dậy tỉnh táo lúc " + danhSachGio.get(0) + 
-                ",\nbạn nên đi ngủ vào một trong những thời điểm sau:");
+            thongTinGioThucDay.setText(String.format("Để thức dậy tỉnh táo lúc %02d:%02d,\nbạn nên đi ngủ vào một trong những thời điểm sau:", gio, phut));
+            danhSachKetQua = TinhToanGioNgu.tinhGioDiNgu(gio, phut);
         } else {
             tieuDeKetQua.setText("Giờ thức dậy");
-            thongTinGioThucDay.setText("Nếu bạn đi ngủ vào lúc " + danhSachGio.get(0) + 
-                ",\nbạn nên đặt báo thức vào một trong những thời điểm sau:");
+            thongTinGioThucDay.setText(String.format("Nếu bạn đi ngủ vào lúc %02d:%02d,\nbạn nên đặt báo thức vào một trong những thời điểm sau:", gio, phut));
+            danhSachKetQua = TinhToanGioNgu.tinhGioThucDay(gio, phut);
         }
 
-        // Hiển thị các thời điểm và chu kỳ
-        for (int i = 1; i < danhSachGio.size(); i++) {
-            String gioVaChuKy = danhSachGio.get(i);
-            String[] parts = gioVaChuKy.split(" \\(");
-            String gio = parts[0];
-            String chuKy = parts[1].replace(")", "");
-            
-            // Hiển thị thời gian và chu kỳ
-            danhSachThoiGian[i-1].setText(gio);
-            danhSachChuKy[i-1].setText(chuKy);
-            
-            // Hiển thị các TextView
-            danhSachThoiGian[i-1].setVisibility(View.VISIBLE);
-            danhSachChuKy[i-1].setVisibility(View.VISIBLE);
-        }
-
-        // Ẩn các TextView không sử dụng
-        for (int i = danhSachGio.size() - 1; i < danhSachThoiGian.length; i++) {
-            danhSachThoiGian[i].setVisibility(View.GONE);
-            danhSachChuKy[i].setVisibility(View.GONE);
-        }
+        adapter = new KetQuaAdapter(danhSachKetQua);
+        recyclerView.setAdapter(adapter);
     }
 } 

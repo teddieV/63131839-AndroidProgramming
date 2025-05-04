@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SleepCalculator</string>
+    <string name="app_name">Sleep Calculator</string>
+    <string name="sleep_times_title">Sleep Times</string>
+    <string name="wake_up_times_title">Wake Up Times</string>
+    <string name="sleep_info">To wake up refreshed at %1$s,\nyou should go to sleep at one of these times:</string>
+    <string name="wake_up_info">If you go to sleep at %1$s,\nyou should set your alarm for one of these times:</string>
+    <string name="calculate_sleep">Calculate Sleep Time</string>
+    <string name="calculate_wake_up">Calculate Wake Up Time</string>
+    <string name="back">Back</string>
+    <string name="or">Or if you want to go to sleep now...</string>
 </resources>

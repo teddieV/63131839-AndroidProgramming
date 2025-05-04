@@ -78,118 +78,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thongTinThoiGianNgu" />
 
-    <!-- Container cho các thời điểm đi ngủ -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/khungThoiGian"
+    <!-- RecyclerView hiển thị kết quả -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:clipToPadding="false"
         android:paddingHorizontal="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/thongTinGioThucDay">
-
-        <!-- Hàng 1 -->
-        <TextView
-            android:id="@+id/thoiGian1"
-            style="@style/KhungThoiGian"
-            android:text="1:20 PM"
-            app:layout_constraintEnd_toStartOf="@+id/thoiGian2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/chuKy1"
-            style="@style/TextChuKy"
-            android:text="8 chu kỳ"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian1"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian1"
-            app:layout_constraintTop_toBottomOf="@+id/thoiGian1" />
-
-        <TextView
-            android:id="@+id/thoiGian2"
-            style="@style/KhungThoiGian"
-            android:text="2:50 PM"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/thoiGian1"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/chuKy2"
-            style="@style/TextChuKy"
-            android:text="7 chu kỳ"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian2"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian2"
-            app:layout_constraintTop_toBottomOf="@+id/thoiGian2" />
-
-        <!-- Hàng 2 -->
-        <TextView
-            android:id="@+id/thoiGian3"
-            style="@style/KhungThoiGian"
-            android:layout_marginTop="16dp"
-            android:text="4:20 PM"
-            app:layout_constraintEnd_toStartOf="@+id/thoiGian4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy1" />
-
-        <TextView
-            android:id="@+id/chuKy3"
-            style="@style/TextChuKy"
-            android:text="6 chu kỳ"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian3"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian3"
-            app:layout_constraintTop_toBottomOf="@+id/thoiGian3" />
-
-        <TextView
-            android:id="@+id/thoiGian4"
-            style="@style/KhungThoiGian"
-            android:text="5:50 PM"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/thoiGian3"
-            app:layout_constraintTop_toTopOf="@+id/thoiGian3" />
-
-        <TextView
-            android:id="@+id/chuKy4"
-            style="@style/TextChuKy"
-            android:text="5 chu kỳ"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian4"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian4"
-            app:layout_constraintTop_toBottomOf="@+id/thoiGian4" />
-
-        <!-- Hàng 3 -->
-        <TextView
-            android:id="@+id/thoiGian5"
-            style="@style/KhungThoiGian"
-            android:layout_marginTop="16dp"
-            android:text="7:20 PM"
-            app:layout_constraintEnd_toStartOf="@+id/thoiGian6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chuKy3" />
-
-        <TextView
-            android:id="@+id/chuKy5"
-            style="@style/TextChuKy"
-            android:text="4 chu kỳ"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian5"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian5"
-            app:layout_constraintTop_toBottomOf="@+id/thoiGian5" />
-
-        <TextView
-            android:id="@+id/thoiGian6"
-            style="@style/KhungThoiGian"
-            android:text="8:50 PM"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/thoiGian5"
-            app:layout_constraintTop_toTopOf="@+id/thoiGian5" />
-
-        <TextView
-            android:id="@+id/chuKy6"
-            style="@style/TextChuKy"
-            android:text="3 chu kỳ"
-            app:layout_constraintEnd_toEndOf="@+id/thoiGian6"
-            app:layout_constraintStart_toStartOf="@+id/thoiGian6"
-            app:layout_constraintTop_toBottomOf="@+id/thoiGian6" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        app:layout_constraintBottom_toTopOf="@+id/btnQuayLai"
+        app:layout_constraintTop_toBottomOf="@+id/thongTinGioThucDay" />
 
     <!-- Nút quay lại -->
     <com.google.android.material.button.MaterialButton
