@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style cho TimePicker -->
+    <style name="TimePickerTextAppearance">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/arcade_among_1</item>
+    </style>
+
+    <!-- Style cho Button chính -->
+    <style name="MainButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textColor">@color/dark_night</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/arcade_among_1</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginHorizontal">24dp</item>
+    </style>
+
+    <!-- Style cho TextView tiêu đề -->
+    <style name="TitleText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/arcade_among_1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style cho TextView mô tả -->
+    <style name="DescriptionText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/arcade_among_1</item>
+    </style>
+</resources> 

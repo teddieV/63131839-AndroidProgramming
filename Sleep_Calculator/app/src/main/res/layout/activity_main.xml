@@ -1,100 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_night">
+    android:background="@drawable/bg2_sleepcalculator">
 
-    <!-- Logo + Title -->
-    <ImageView
-        android:id="@+id/imgMoon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_moon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"/>
+    <!-- Logo, tiêu đề , timepicker ,  -->
+    <!-- https://fonts.google.com/selection?lang=vi_Latn -->
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvCauHoi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sleep Calculator"
-        android:textColor="@android:color/white"
-        android:textSize="32sp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="28dp"
+        android:text="Bạn muốn thức dậy lúc mấy giờ?"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgMoon"
-        app:layout_constraintBottom_toBottomOf="@id/imgMoon"
-        android:layout_marginStart="16dp"/>
-
-    <!-- Question -->
-    <TextView
-        android:id="@+id/tvQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="What time do you want to wake up?"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/imgMoon"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/boChonThoiGian"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- TimePicker -->
     <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:timePickerMode="spinner"
-        android:layout_marginTop="16dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+        android:id="@+id/boChonThoiGian"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:background="#00181C2C"
+        android:headerAmPmTextAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:headerBackground="#00181C2C"
+        android:numbersBackgroundColor="#27FFFFFF"
+        android:numbersTextColor="@color/yellow"
+        android:timePickerMode="clock"
+        app:layout_constraintBottom_toTopOf="@+id/btnTinhGioNgu"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvCauHoi" />
 
-    <!-- Calculate Bedtime Button -->
     <Button
-        android:id="@+id/btnCalculateBedtime"
+        android:id="@+id/btnTinhGioNgu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calculate bedtime 🌙"
-        android:backgroundTint="#E6D8A7"
-        android:textColor="#22223B"
-        app:layout_constraintTop_toBottomOf="@id/timePicker"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Tính giờ đi ngủ 🌙"
+        android:textColor="@color/dark_night"
+        app:layout_constraintBottom_toTopOf="@+id/tvHienTai"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boChonThoiGian" />
 
-    <!-- Calculate Wake-up Time Button -->
     <TextView
-        android:id="@+id/tvOr"
+        android:id="@+id/tvHienTai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If you want to go to bed now..."
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/btnCalculateBedtime"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="15dp"
+        android:text="Nếu đi ngủ bây giờ, tính ngay"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTinhGioThuc"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTinhGioNgu" />
 
     <Button
-        android:id="@+id/btnCalculateWakeup"
+        android:id="@+id/btnTinhGioThuc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calculate wake-up time ⏰"
-        android:backgroundTint="#E6D8A7"
-        android:textColor="#22223B"
-        app:layout_constraintTop_toBottomOf="@id/tvOr"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"/>
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Tính giờ thức dậy⏰"
+        android:textColor="@color/dark_night"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHienTai" />
 </androidx.constraintlayout.widget.ConstraintLayout>
