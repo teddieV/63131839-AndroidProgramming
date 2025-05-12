@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="dark_night">#181C2C</color>
-    <color name="yellow">#F6E27A</color>
+    <!-- Light theme colors -->
+    <color name="primary">#4A6572</color>
+    <color name="primary_dark">#344955</color>
+    <color name="secondary">#F9AA33</color>
+    <color name="secondary_dark">#F57F17</color>
+    <color name="background">#F5F5F5</color>
+    <color name="ripple">#33000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
 </resources>
