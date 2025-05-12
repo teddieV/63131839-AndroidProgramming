@@ -12,4 +12,8 @@
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="divider">#BDBDBD</color>
+
+    <!-- Custom colors -->
+    <color name="yellow">#FFD700</color>
+    <color name="dark_night">#1A1A1A</color>
 </resources>

@@ -16,72 +16,67 @@
         android:layout_marginBottom="28dp"
         android:text="Bạn muốn thức dậy lúc mấy giờ?"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="18dp"
         android:textStyle="bold"
-        android:fontFamily="@font/arcade_among_1"
-        android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/boChonThoiGian"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/timePickerCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="24dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
+    <TimePicker
+        android:id="@+id/boChonThoiGian"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:background="#002C1818"
+        android:headerAmPmTextAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:headerBackground="#00181C2C"
+        android:numbersBackgroundColor="#27FFFFFF"
+        android:numbersTextColor="@color/yellow"
+        android:timePickerMode="clock"
         app:layout_constraintBottom_toTopOf="@+id/btnTinhGioNgu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCauHoi">
+        app:layout_constraintTop_toBottomOf="@+id/tvCauHoi" />
 
-        <TimePicker
-            android:id="@+id/boChonThoiGian"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:headerAmPmTextAppearance="@style/TimePickerTextAppearance"
-            android:headerBackground="@android:color/transparent"
-            android:numbersBackgroundColor="#27FFFFFF"
-            android:numbersTextColor="@color/yellow"
-            android:timePickerMode="clock" />
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnTinhGioNgu"
-        style="@style/MainButton"
-        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/yellow"
         android:text="Tính giờ đi ngủ 🌙"
-        app:icon="@drawable/ic_moon"
-        app:iconGravity="textStart"
+        android:textColor="@color/dark_night"
         app:layout_constraintBottom_toTopOf="@+id/tvHienTai"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timePickerCard" />
+        app:layout_constraintTop_toBottomOf="@+id/boChonThoiGian" />
 
     <TextView
         android:id="@+id/tvHienTai"
-        style="@style/DescriptionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:text="Nếu đi ngủ bây giờ, tính ngay"
+        android:textColor="@color/white"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/btnTinhGioThuc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTinhGioNgu" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnTinhGioThuc"
-        style="@style/MainButton"
-        android:layout_marginBottom="32dp"
-        android:text="Tính giờ thức dậy ⏰"
-        app:icon="@drawable/ic_alarm"
-        app:iconGravity="textStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Tính giờ thức dậy⏰"
+        android:textColor="@color/dark_night"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
