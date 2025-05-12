@@ -1,10 +1,14 @@
 package ntu.tvva.sleep_calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import android.provider.AlarmClock;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -56,7 +60,7 @@ public class ResultActivity extends AppCompatActivity {
         for (int cycles = 6; cycles >= 4; cycles--) {
             Calendar sleepTime = (Calendar) targetTime.clone();
             sleepTime.add(Calendar.MINUTE, -15 - cycles * 90);
-            addTimeToLayout(timeLayout, timeFormat.format(sleepTime.getTime()), cycles);
+            addTimeToLayout(timeLayout, timeFormat.format(sleepTime.getTime()), cycles, sleepTime);
         }
     }
 
@@ -72,21 +76,23 @@ public class ResultActivity extends AppCompatActivity {
         for (int cycles = 4; cycles <= 6; cycles++) {
             Calendar wakeupTime = (Calendar) currentTime.clone();
             wakeupTime.add(Calendar.MINUTE, 15 + cycles * 90);
-            addTimeToLayout(timeLayout, timeFormat.format(wakeupTime.getTime()), cycles);
+            addTimeToLayout(timeLayout, timeFormat.format(wakeupTime.getTime()), cycles, wakeupTime);
         }
     }
 
-    private void addTimeToLayout(LinearLayout layout, String time, int cycles) {
+    private void addTimeToLayout(LinearLayout layout, String time, int cycles, Calendar timeCalendar) {
         LinearLayout container = new LinearLayout(this);
         container.setOrientation(LinearLayout.VERTICAL);
         container.setBackgroundResource(R.drawable.bg_time_item);
         container.setPadding(32, 24, 32, 24);
+        container.setClickable(true);
+        container.setFocusable(true);
 
         // TextView cho thời gian
         TextView tvTime = new TextView(this);
         tvTime.setText(time);
         tvTime.setTextSize(22);
-        tvTime.setTextColor(getResources().getColor(R.color.white));
+        tvTime.setTextColor(ContextCompat.getColor(this, R.color.white));
         
         // TextView cho thông tin chu kỳ
         TextView tvInfo = new TextView(this);
@@ -94,7 +100,7 @@ public class ResultActivity extends AppCompatActivity {
         String benefit = getCycleBenefit(cycles);
         tvInfo.setText(cycleInfo + "\n" + benefit);
         tvInfo.setTextSize(14);
-        tvInfo.setTextColor(getResources().getColor(R.color.white));
+        tvInfo.setTextColor(ContextCompat.getColor(this, R.color.white));
         tvInfo.setAlpha(0.8f);
         
         // Thêm các TextView vào container
@@ -107,6 +113,32 @@ public class ResultActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 16, 0, 0);
         container.setLayoutParams(params);
+
+        // Thêm click listener
+        container.setOnClickListener(v -> {
+            // Hiệu ứng khi click
+            container.setAlpha(0.7f);
+            container.postDelayed(() -> container.setAlpha(1.0f), 100);
+
+            // Lấy giờ và phút từ timeCalendar
+            int hour = timeCalendar.get(Calendar.HOUR_OF_DAY);
+            int minute = timeCalendar.get(Calendar.MINUTE);
+
+            // Tạo intent để set báo thức
+            Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM);
+            intent.putExtra(AlarmClock.EXTRA_HOUR, hour);
+            intent.putExtra(AlarmClock.EXTRA_MINUTES, minute);
+            intent.putExtra(AlarmClock.EXTRA_MESSAGE, "Sleep Calculator");
+
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+                String message = "Đã mở đồng hồ báo thức.\nVui lòng xác nhận báo thức lúc " + time + 
+                               "\n(" + getCycleBenefit(cycles) + ")";
+                Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Không tìm thấy ứng dụng đồng hồ báo thức trên thiết bị của bạn", Toast.LENGTH_SHORT).show();
+            }
+        });
         
         layout.addView(container);
     }
