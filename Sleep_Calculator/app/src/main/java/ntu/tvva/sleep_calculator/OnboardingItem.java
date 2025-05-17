@@ -11,7 +11,7 @@ public class OnboardingItem {
     public OnboardingItem(int hinhAnh, String tieuDe, String moTa) {
         this.hinhAnh = hinhAnh;
         this.tieuDe = tieuDe;
-        this.moTa = moTa;
+        this.moTa = moTa;   
     }
 
     // Các hàm lấy thông tin

@@ -57,7 +57,7 @@ public class ResultActivity extends AppCompatActivity {
 
         // Hiển thị các thời điểm đi ngủ
         SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a", Locale.getDefault());
-        for (int cycles = 6; cycles >= 4; cycles--) {
+        for (int cycles = 6; cycles >= 1; cycles--) {
             Calendar sleepTime = (Calendar) targetTime.clone();
             sleepTime.add(Calendar.MINUTE, -15 - cycles * 90);
             addTimeToLayout(timeLayout, timeFormat.format(sleepTime.getTime()), cycles, sleepTime);
@@ -73,7 +73,7 @@ public class ResultActivity extends AppCompatActivity {
 
         // Hiển thị các thời điểm thức dậy
         SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a", Locale.getDefault());
-        for (int cycles = 4; cycles <= 6; cycles++) {
+        for (int cycles = 1; cycles <= 6; cycles++) {
             Calendar wakeupTime = (Calendar) currentTime.clone();
             wakeupTime.add(Calendar.MINUTE, 15 + cycles * 90);
             addTimeToLayout(timeLayout, timeFormat.format(wakeupTime.getTime()), cycles, wakeupTime);
@@ -145,10 +145,20 @@ public class ResultActivity extends AppCompatActivity {
 
     private String getCycleBenefit(int cycles) {
         switch (cycles) {
-            case 4: return "Ngủ tối thiểu, phù hợp khi cần dậy sớm";
-            case 5: return "Ngủ đủ, cân bằng giữa thời gian và chất lượng";
-            case 6: return "Ngủ đầy đủ, tối ưu cho sức khỏe và năng lượng";
-            default: return "";
+            case 1:
+                return "Ngủ 1 chu kỳ (~90 phút): Power nap ngắn, giúp tăng tỉnh táo tạm thời, phù hợp khi cần tập trung nhanh nhưng không thay thế giấc ngủ đầy đủ.";
+            case 2:
+                return "Ngủ 2 chu kỳ (~3 giờ): Giấc ngủ ngắn, cải thiện năng lượng tạm thời, nhưng không đủ để phục hồi toàn diện.";
+            case 3:
+                return "Ngủ 3 chu kỳ (~4.5 giờ): Giấc ngủ tối thiểu, có thể gây mệt mỏi do thức dậy giữa chu kỳ REM, chỉ nên dùng khi hạn chế về thời gian.";
+            case 4:
+                return "Ngủ 4 chu kỳ (~6 giờ): Giấc ngủ ngắn nhưng chấp nhận được, phù hợp để duy trì năng lượng cơ bản khi thiếu thời gian.";
+            case 5:
+                return "Ngủ 5 chu kỳ (~7.5 giờ): Giấc ngủ lý tưởng cho hầu hết người lớn, cân bằng giữa phục hồi thể chất và tinh thần.";
+            case 6:
+                return "Ngủ 6 chu kỳ (~9 giờ): Giấc ngủ tối ưu, hỗ trợ sức khỏe toàn diện, cải thiện trí nhớ và năng suất.";
+            default:
+                return "";
         }
     }
-}
+}   

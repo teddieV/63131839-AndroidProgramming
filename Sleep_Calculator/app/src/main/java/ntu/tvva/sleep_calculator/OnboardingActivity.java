@@ -27,12 +27,12 @@ public class OnboardingActivity extends AppCompatActivity {
 
         // Tạo danh sách các trang onboarding
         List<OnboardingItem> items = new ArrayList<>();
-        items.add(new OnboardingItem(R.drawable.ic_moon, "Tính toán giấc ngủ", 
-            "Tính toán thời gian ngủ tối ưu dựa trên chu kỳ giấc ngủ của bạn"));
-        items.add(new OnboardingItem(R.drawable.ic_moon, "Chu kỳ giấc ngủ", 
-            "Mỗi chu kỳ giấc ngủ kéo dài khoảng 90 phút, và bạn cần 4-6 chu kỳ để có giấc ngủ chất lượng"));
-        items.add(new OnboardingItem(R.drawable.ic_moon, "Bắt đầu ngay", 
-            "Hãy bắt đầu tính toán thời gian ngủ tối ưu cho bạn"));
+        items.add(new OnboardingItem(R.drawable.sleepgirl, "Khám phá giấc ngủ lý tưởng của bạn!",
+            "Tính toán thời gian ngủ tối ưu dựa trên chu kỳ 90 phút, giúp bạn thức dậy sảng khoái và tràn đầy năng lượng."));
+        items.add(new OnboardingItem(R.drawable.sleepboy, "Ngủ đúng, sống khỏe",
+            "Nhận gợi ý giờ đi ngủ lý tưởng với 5-6 chu kỳ (~7.5-9 giờ), được thiết kế dựa trên nghiên cứu khoa học về giấc ngủ."));
+        items.add(new OnboardingItem(R.drawable.moon_1, "Bắt đầu hành trình ngủ ngon ngay hôm nay!",
+            "Chỉ cần nhập giờ thức dậy, Sleep Calculator sẽ đề xuất thời gian đi ngủ tốt nhất của bạn nhé! hẹ hẹ hẹ"));
 
         // Cài đặt ViewPager
         OnboardingAdapter adapter = new OnboardingAdapter(items);

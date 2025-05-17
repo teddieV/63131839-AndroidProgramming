@@ -12,6 +12,12 @@
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="divider">#BDBDBD</color>
+    <!-- Màu nút -->
+    <color name="pinkpastel">#E8B3E5</color>
+    <color name="timlavender">#C9A7F5</color>
+    <!-- Màu chữ -->
+    <color name="timdam">#5B2C6F</color>
+    <color name="timthan">#3D2C5A</color>
 
     <!-- Custom colors -->
     <color name="yellow">#FFD700</color>
