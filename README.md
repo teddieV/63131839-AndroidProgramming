@@ -12,6 +12,40 @@
 
 </div>
 
+## 📱 Dự Án Cuối Kỳ: SLEEP CALCULATOR ⏰💤
+
+
+### 🧠 Giới thiệu:
+**Sleep Calculator** là ứng dụng tính toán thời gian ngủ hợp lý giúp người dùng:
+- Cải thiện chất lượng giấc ngủ
+- Biết khi nào nên **đi ngủ** hoặc **thức dậy** để không bị mệt mỏi
+- Dựa trên chu kỳ ngủ khoa học (mỗi chu kỳ ~90 phút)
+
+Ứng dụng cho phép nhập giờ ngủ hoặc giờ thức dậy, sau đó gợi ý các mốc thời gian phù hợp để bạn tỉnh táo hơn khi bắt đầu ngày mới.
+
+### ⚙️ Tính năng chính:
+- 📅 Tính giờ đi ngủ nếu biết giờ thức dậy
+- ⏰ Tính giờ thức dậy nếu biết giờ đi ngủ
+- 👁️ Hiển thị kết quả đơn giản, dễ đọc
+
+### 🛠️ Công nghệ sử dụng:
+- Android Studio
+- Java
+- Material Design UI
+### Preview:
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/1.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/2.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/3.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/4.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/5.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/6.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/7.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/8.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/9.png"/>
+<img src="https://github.com/teddieV/63131839-AndroidProgramming/blob/main/Morkup/1.png"/>
+
+
+---
 
 |📚**Bài tập**|🎨**Mô tả**|🖼️**Hình ảnh**|
 |-------------|----------------|--------------|
