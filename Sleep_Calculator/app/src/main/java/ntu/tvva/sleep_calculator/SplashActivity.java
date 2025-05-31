@@ -9,6 +9,7 @@ public class SplashActivity extends AppCompatActivity {
     // Thời gian hiển thị màn hình chào (3 giây)
     private static final long THOI_GIAN_CHO = 3000;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

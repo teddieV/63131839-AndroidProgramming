@@ -14,6 +14,9 @@
     <color name="divider">#BDBDBD</color>
     <!-- Màu nút -->
     <color name="pinkpastel">#E8B3E5</color>
+    <color name="camdao">#F6bcba</color>
+    <color name="bluecute">#c3c7f4</color>
+
     <color name="timlavender">#C9A7F5</color>
     <!-- Màu chữ -->
     <color name="timdam">#5B2C6F</color>
