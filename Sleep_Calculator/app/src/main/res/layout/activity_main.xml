@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_main">
@@ -10,24 +11,21 @@
 
     <TextView
         android:id="@+id/tvCauHoi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="278dp"
+        android:layout_height="31dp"
         android:text="Bạn muốn thức dậy lúc mấy giờ?"
-        android:textColor="@color/white"
+        android:textColor="@color/camdao"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/boChonThoiGian"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="55dp" />
 
     <TimePicker
         android:id="@+id/boChonThoiGian"
         android:layout_width="410dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="37dp"
+        android:layout_height="353dp"
         android:amPmBackgroundColor="@color/pinkpastel"
         android:amPmTextColor="@color/pinkpastel"
         android:background="#00000000"
@@ -36,54 +34,40 @@
         android:headerAmPmTextAppearance="@style/TextAppearance.AppCompat.Display1"
         android:headerBackground="#00181C2C"
         android:numbersBackgroundColor="#27FFFFFF"
-        android:numbersSelectorColor="@color/timdam"
+        android:numbersSelectorColor="@color/timlavender"
         android:numbersTextColor="@color/white"
         android:timePickerMode="clock"
-        app:layout_constraintBottom_toTopOf="@+id/btnTinhGioNgu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCauHoi" />
+        tools:layout_editor_absoluteY="119dp" />
 
     <Button
         android:id="@+id/btnTinhGioNgu"
-        android:layout_width="0dp"
+        android:layout_width="361dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="13dp"
         android:backgroundTint="@color/pinkpastel"
         android:text="Tính giờ đi ngủ 🌙"
         android:textColor="@color/timthan"
-        app:layout_constraintBottom_toTopOf="@+id/tvHienTai"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boChonThoiGian" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="541dp" />
 
     <TextView
         android:id="@+id/tvHienTai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:text="Nếu đi ngủ bây giờ, tính ngay"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnTinhGioThuc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTinhGioNgu" />
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="602dp" />
 
     <Button
         android:id="@+id/btnTinhGioThuc"
-        android:layout_width="0dp"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="@color/camdao"
+        android:backgroundTint="@color/pinkpastel"
         android:text="Tính giờ thức dậy⏰"
         android:textColor="@color/timthan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHienTai" />
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="634dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

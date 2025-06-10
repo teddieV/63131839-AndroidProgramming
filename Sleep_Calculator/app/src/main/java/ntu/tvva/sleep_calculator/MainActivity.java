@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("isAM", isAM);
             startActivity(intent);
         });
+
         // Xử lý nút tính giờ thức dậy
         btnCalculateWakeup.setOnClickListener(v -> {
             Intent intent = new Intent(this, ResultActivity.class);

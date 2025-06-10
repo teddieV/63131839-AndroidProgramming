@@ -20,7 +20,7 @@ public class OnboardingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
-        // Khởi tạo views
+        // Khởi tạo viewpager2
         viewPager = findViewById(R.id.viewPager);
         indicatorLayout = findViewById(R.id.indicatorLayout);
         btnNext = findViewById(R.id.btnNext);
